@@ -6,8 +6,6 @@ const target = "https://api.openai.com/v1/chat/completions";
 // 转发请求并获取响应
 const response = await fetch(target, { headers, method, body });
 const data = await response.json();
+Astro.response.setHeader("Content-Type", "application/json");
+return data
 ---
-<!-- 显示响应数据 -->
-<pre>
-  {JSON.stringify(data, null, 2)}
-</pre>
