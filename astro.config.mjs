@@ -30,6 +30,13 @@ const adapter = () => {
 
 // https://astro.build/config
 export default defineConfig({
+    routes: [
+    {
+      path: "/openai",
+      methods: ["POST"],
+      src: "./src/proxy/openai.js",
+    },
+  ],
   integrations: [
     unocss({
       presets: [
