@@ -1,0 +1,12 @@
+---
+import openai from "./api/openai.ts";
+---
+
+<astro>
+  <script context="module" lang="ts">
+    export const paths = ["/api/openai"];
+    export { openai };
+  </script>
+
+  <div>Hello, World!</div>
+</astro>
