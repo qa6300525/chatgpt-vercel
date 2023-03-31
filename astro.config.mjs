@@ -33,7 +33,7 @@ export default defineConfig({
     routes: [
     {
       path: "/openai",
-      methods: ["POST"],
+      methods: ["GET", "POST"],
       src: "./src/proxy/openai.js",
     },
   ],

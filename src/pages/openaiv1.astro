@@ -1,0 +1,13 @@
+---
+// 获取原始请求的信息
+const { url, headers, method, body } = Astro.request;
+// 设置目标服务器的地址
+const target = "https://api.openai.com/v1/chat/completions";
+// 转发请求并获取响应
+const response = await fetch(target + url, { headers, method, body });
+const data = await response.json();
+---
+<!-- 显示响应数据 -->
+<pre>
+  {JSON.stringify(data, null, 2)}
+</pre>
