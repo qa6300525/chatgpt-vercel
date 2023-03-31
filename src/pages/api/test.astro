@@ -1,0 +1,23 @@
+---
+try {
+  // 获取请求的信息
+  const { url, headers, method, body } = Astro.request;
+  // 返回一个JSON对象
+  return {
+    message: "Hello from endpoint",
+    url,
+    headers,
+    method,
+    body
+  };
+} catch (error) {
+  // 打印错误信息
+  console.error(error);
+  // 返回一个错误响应
+  Astro.response.statusCode = 500;
+  return {
+    message: "Something went wrong",
+    error: error.message
+  };
+}
+---
