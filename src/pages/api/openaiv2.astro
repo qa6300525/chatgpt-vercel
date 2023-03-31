@@ -6,6 +6,8 @@ const target = "https://api.openai.com/v1/chat/completions";
 // 转发请求并获取响应
 const response = await fetch(target, { headers, method, body });
 const data = await response.json();
+console.log("Error parsing DEFAULT_SETTING:", data)
+console.error("Error parsing MAX_INPUT_TOKEN:", data)
 Astro.response.setHeader("Content-Type", "application/json");
 return data
 ---
