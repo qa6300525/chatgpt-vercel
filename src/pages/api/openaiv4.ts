@@ -48,7 +48,7 @@ export async function get(context) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: j_data['data'],
+      body: j_data.data,
     };
   } catch (error) {
     // 打印错误信息
