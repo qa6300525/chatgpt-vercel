@@ -42,13 +42,13 @@ export async function get(context) {
     // 转发请求并获取响应
     const response = await fetch(target, { headers, method, body });
     const data = await response.json();
-
+    const j_data = JSON.stringify(data);
     return {
       statusCode: 200,
       headers: {
         "Content-Type": "application/json",
       },
-      body: response,
+      body: j_data['data'],
     };
   } catch (error) {
     // 打印错误信息
