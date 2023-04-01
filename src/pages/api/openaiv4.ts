@@ -13,9 +13,7 @@ export async function post(context) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        data
-      }),
+      body: data,
     };
   } catch (error) {
     // 打印错误信息
@@ -50,9 +48,7 @@ export async function get(context) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        data
-      }),
+      body: data,
     };
   } catch (error) {
     // 打印错误信息
