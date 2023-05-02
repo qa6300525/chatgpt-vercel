@@ -13,7 +13,7 @@ export async function post(context) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify({data}),
     };
   } catch (error) {
     // 打印错误信息
